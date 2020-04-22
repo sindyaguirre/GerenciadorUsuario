@@ -6,13 +6,13 @@ Importe o arquivo .sql para seu banco, onde ira criar automaticamente o banco e 
 
 Para salvar o arquivo no seu repositório primeiro abra o painel de controle do git onde deseja salvar este projeto para que rode no seu servidor local, para clonar o arquivo no seu deretorio utilize alinha de código abaixo
 
-git clone https://github.com/sindyaguirre/GerenciadorUsuarios.git
+git clone https://github.com/sindyaguirre/GerenciadorUsuario.git
 
 
-Na sua localhost, acesse o link GerenciadorUsuarios, caso não funcione acesse http://[localhost]/GerenciadorUsuarios.index.php
+Na sua localhost, acesse o link GerenciadorUsuarios, caso não funcione acesse http://[localhost]/GerenciadorUsuario.index.php
 
 a primeira página será a de home que contém uma tabela com a lista de pessoas cadastradas
 
-http://localhost/GerenciadorUsuarios/home.php
+http://localhost/GerenciadorUsuario/home.php
 
 ao acessar você será redirecionado para a página principal, a home, onde contém o menu horizontal na parte superior, e uma tabela que lista todos os usuarios cadastrados. Por esta tabela você poderá editar, ou excluir pessoas. Para adicionar novoUsuario clique no menu "Novo Usuario", onde abrirá um formulário de cadastro.
