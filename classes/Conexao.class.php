@@ -27,8 +27,27 @@ class Conexao {
     {
         if (is_null(self::$pdo))
         {
-            self::$pdo = new PDO('mysql:host=localhost;dbname=dbgerenciadorusuarios', 'root', '');
-            self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            
+           try{
+
+               if($_SERVER['HTTP_HOST']=='localhost'){
+                    $host="localhost";
+                    $dbname="dbgerenciadorusuarios";
+                    $user="root";
+                    $passw="";
+ 
+               }else{
+                    $host="";
+                    $dbname="";
+                    $user="";
+                    $passw="";
+               }
+                self::$pdo = new PDO('mysql:host='.$host.';dbname='.$dbname, $user, $passw);
+
+                self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+           }catch(PDOException $Exception){
+                throw new MyDatabaseException($Exception->getMessage());
+           }
         }
         return (self::$pdo) ? self::$pdo : false;
     }

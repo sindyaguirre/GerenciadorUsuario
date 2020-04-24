@@ -16,7 +16,7 @@
         <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" media="all">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
         <link rel="stylesheet" href="css/blue/style.css">
-
+        <link rel="shortcut icon" type = "imagem/x-icon" href = "favicon.ico"/>
         <!--jQuery (obrigatório para plugins JavaScript do Bootstrap)--> 
         <script src="js/jquery.min.js"></script>
 

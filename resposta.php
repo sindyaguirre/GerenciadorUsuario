@@ -8,7 +8,7 @@ $objUsuario = new Usuario();
 include 'header.php';
 include 'menu.php';
 /**
- * esta tela nao é a melhor forma de apresentar um erro, isto será feito com validator do jquery
+ * esta tela nao é a melhor forma de apresentar um erro, isto pode feito com validator do jquery
  */
 ?>
 <div><h1 class=""><small></small></h1></div>
@@ -16,7 +16,7 @@ include 'menu.php';
 <div class="container">
 
         <h5 style="color:red">Nome ou telefone já cadastrados<h5>
-        <a href="http://localhost/GerenciadorUsuarios/cadastrarUsuario.php">Volte a tela de cadastro</a>
+        <a href="/<?=ROOT?>/cadastrarUsuario.php">Volte a tela de cadastro</a>
 </div>
 <?php
 include 'footer.php';

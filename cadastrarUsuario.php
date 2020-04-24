@@ -10,8 +10,10 @@ if (isset($_POST['btCadastrar'])) {
     echo '<script type="text/javascript">alert("' . $arrayResponse['msg'] . '");</script>';
 
     if ($arrayResponse['status'] == true) {
-
-        header('location: /' . ROOT . '/listarUsuarios.php');
+        if(isset($_POST))
+        unset($_POST);
+        //header('location: /' . ROOT . '/listarUsuarios.php');
+       // die;
     }
 }
 
@@ -19,18 +21,20 @@ if (isset($_POST['btAlterar'])) {
 
     //utilizar funcao default
     $arrayResponse = $objUsuario->queryUpdate($_POST);
+    
+    if(isset($usuario))
     unset($usuario);
+
     echo '<script type="text/javascript">alert("' . $arrayResponse['msg'] . '");</script>';
     if ($arrayResponse['status'] == true) {
-        header('location: /' . ROOT . '/listarUsuarios.php');
+        //header('location: /' . ROOT . '/listarUsuarios.php');
     }
 }
 
 if (isset($_GET['acao'])) {
     switch ($_GET['acao']) {
         case 'edit':
-            $id = isset($_GET['ted']) ? $_GET['ted'] : "0";
-            $arrayReturn = $objUsuario->querySeleciona($id);
+            $arrayReturn = $objUsuario->querySeleciona($_GET['func']);
             $usuario = $arrayReturn['arrayDados'];
 
             break;

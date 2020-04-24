@@ -59,3 +59,13 @@ div.accordion-group {
     float: left;     
     text-align: center;
 }
+.col-12{
+    width: 100%;
+}
+.col-4 label{
+    cursor: default;
+}
+.col-4{
+    width: 25%;
+    float: left;
+}

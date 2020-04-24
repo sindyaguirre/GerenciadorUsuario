@@ -2,7 +2,15 @@
 
 define("TITULO", 'CRUD usuários');
 define("TITULO_USUARIO", 'Gerenciador de dados de usuários');
-define("ROOT", 'GerenciadorUsuarios');
+
+if($_SERVER['HTTP_HOST']=='localhost'){
+
+    define("ROOT", '/GerenciadorUsuario');
+}else{
+
+    define("ROOT",'crud_2020');
+    define("ROOT_LOCATION",'http://'.$_SERVER['HTTP_HOST'].'/crud_2020');
+}
 
 class Funcoes {
 

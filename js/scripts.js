@@ -1,5 +1,6 @@
 $(function () {
-    /*fonte https://www.todoespacoonline.com/w/2014/09/tablesorter-jquery/*/
+
+   /*fonte https://www.todoespacoonline.com/w/2014/09/tablesorter-jquery/*/
     // Parser para configurar a data para o formato do Brasil
     $.tablesorter.addParser({
         id: 'datetime',
@@ -14,19 +15,6 @@ $(function () {
         type: 'numeric'
     });
 
-    $('.tablesorter.tabelaUsuarios').tablesorter({
-        // Envia os cabeçalhos 
-        headers: {
-            5: {
-                // Desativa a ordenação para essa coluna 
-                sorter: false
-            },
-            4: {
-                // Desativa a ordenação para essa coluna 
-                sorter: false
-            }
-        }
-    });
     /*
      * 
      */
